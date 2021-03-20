@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*
+Theme Name: HardangerfjordMagasinet
+Theme URI: https://wordpress.org/themes/twentytwentyone/
+Author: Mind Design (Tommy Eliassen)
+Author URI: https://minddesign.no/
+Description: Custom theme for HardangerFjord Magasinet
+Requires at least: 5.3
+Tested up to: 5.6
+Requires PHP: 7.4
+Version: 1.2
+Text Domain: hardangerfjordmagasinet
+*/
+
+@import url("./css/tailwind.css");
