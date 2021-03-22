@@ -4,18 +4,24 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package HardangerFjordMagasinet
+ * @since HardangerFjordMagasinet 1.0
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('-mt-4 max-w-5xl'); ?>>
 
-	<header class="entry-header alignwide">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php twenty_twenty_one_post_thumbnail(); ?>
+    <div class="my-4" style="height: 40px; width: 100%; background-image: url(<?php echo get_stylesheet_directory_uri() . '/img/featured-border.png' ?>); background-repeat: repeat-x"></div>
+
+    <header class="entry-header alignwide">
+		<?php the_title( '<h1 class="mb-4 text-5xl">', '</h1>' ); ?>
+        <div class="mb-4 text-xl">
+            <?php the_excerpt() ?>
+        </div>
+		<?php the_post_thumbnail('full', array('class' => 'w-full h-auto')); ?>
+        <div class="mt-2 mb-4 text-lg"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></div>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -24,21 +30,21 @@
 
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'hardangerfjordmagasinet' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
+				'pagelink' => esc_html__( 'Page %', 'hardangerfjordmagasinet' ),
 			)
 		);
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php twenty_twenty_one_entry_meta_footer(); ?>
+		<?php //twenty_twenty_one_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
+		<?php //get_template_part( 'template-parts/post/author-bio' ); ?>
 	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

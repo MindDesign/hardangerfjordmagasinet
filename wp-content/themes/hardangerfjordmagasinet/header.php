@@ -29,15 +29,7 @@
                 </a>
                 <div class="flex flex-col items-end">
                     <div class="px-4 py-2 mb-3 w-44 bg-gray-100">Søk</div>
-
                     <?php get_template_part( 'templates/header/site-nav' ); ?>
-                    
-                    <nav class="">
-                        <a href="#" class="pr-4 text-xl text-primary uppercase">Artikler</a>
-                        <a href="#" class="pr-4 text-xl text-primary uppercase">Annonsere</a>
-                        <a href="#" class="pr-4 text-xl text-primary uppercase">Om oss</a>
-                        <a href="#" class="text-xl text-primary uppercase">Kontakt oss</a>
-                    </nav>
                 </div>
             </div>
 

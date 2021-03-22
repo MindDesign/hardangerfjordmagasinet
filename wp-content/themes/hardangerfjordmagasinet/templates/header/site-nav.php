@@ -9,17 +9,12 @@
 ?>
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
-    <nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'hardangerfjordmagasinet' ); ?>">
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location'  => 'primary',
-                'menu_class'      => 'menu-wrapper',
-                'container_class' => 'primary-menu-container',
-                'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
-                'fallback_cb'     => false,
-            )
-        );
-        ?>
+    <nav id="site-navigation" class="" role="navigation" aria-label="<?php esc_attr_e( 'Primary menu', 'hardangerfjordmagasinet' ); ?>">
+        <?php $items = wp_get_nav_menu_items('Hovedmeny'); ?>
+        <?php if ( !empty ( $items ) ) : ?>
+            <?php foreach ( $items as $item ) : ?>
+                <a href="<?php echo $item->url; ?>" class="pl-4 text-xl text-primary uppercase"><?php echo $item->title; ?></a>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </nav><!-- #site-navigation -->
 <?php endif; ?>
