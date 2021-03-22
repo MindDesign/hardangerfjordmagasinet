@@ -17,6 +17,18 @@
 <footer id="site-footer" class="w-full border-t-2 border-b-2 border-primary-lighter" role="contentinfo">
     <div class="bg-primary-lighter">
         <div class="max-w-5xl p-0 lg:p-4 xl:p-6 my-1">
+            <div class="grid grid-cols-3 gap-8">
+                <div class="col">
+                    <img class="" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg'; ?>" alt="">
+                </div>
+                <div class="col">
+                    <h4 class="font-bold">Kontakt oss</h4>
+                    <p>Adresse kommer her</p>
+                    <p>Telefon: 00 00 00 00</p>
+                    <p>E-post: post@domene.no</p>
+                    <a href="#">Personvern & informasjonskapsler</a>
+                </div>
+            </div>
             <p>Footer</p>
             <p>Testing testing</p>
         </div>

@@ -4,9 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package HardangerFjordMagasinet
+ * @since HardangerFjordMagasinet 1.0
  */
 
 ?>
@@ -15,12 +14,12 @@
 
 	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header alignwide">
-			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-			<?php twenty_twenty_one_post_thumbnail(); ?>
+			<?php get_template_part( 'templates/header/entry-header' ); ?>
+			<?php hardangerfjordmagasinet_post_thumbnail(); ?>
 		</header><!-- .entry-header -->
 	<?php elseif ( has_post_thumbnail() ) : ?>
 		<header class="entry-header alignwide">
-			<?php twenty_twenty_one_post_thumbnail(); ?>
+			<?php hardangerfjordmagasinet_post_thumbnail(); ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 

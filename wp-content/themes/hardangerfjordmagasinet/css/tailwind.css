@@ -32382,6 +32382,18 @@ video {
           animation: bounce 1s infinite;
 }
 
+/**
+ Typography
+ */
+
+.single article h1, .single article h2 {
+  line-height: 1.5rem;
+}
+
+.single article .entry-content p {
+  margin-bottom: 1rem;
+}
+
 #frontpage-featured h1 {
   text-shadow: #222 1px 3px 10px;
 }

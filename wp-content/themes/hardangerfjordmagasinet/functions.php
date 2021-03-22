@@ -1,4 +1,10 @@
 <?php
+/**
+ * functions.php
+ *
+ * @package HardangerFjordMagasinet
+ * @since HardangerFjordMagasinet 1.0
+ */
 
 /**
  *
@@ -137,3 +143,63 @@ function hardangerfjordmagasinet_scripts()
     wp_enqueue_script( 'hardangerfjordmagasinet-logo-carousel-script', get_template_directory_uri() . '/js/hardangermagasinet.js', array(), wp_get_theme()->get('version'), true );
 }
 add_action( 'wp_enqueue_scripts', 'hardangerfjordmagasinet_scripts' );
+
+
+if ( ! function_exists( 'hardangerfjordmagasinet_post_thumbnail' ) ) {
+    /**
+     * Displays an optional post thumbnail.
+     *
+     * Wraps the post thumbnail in an anchor element on index views, or a div
+     * element when on single views.
+     *
+     * @since HardangerFjordMagasinet 1.0
+     *
+     * @return void
+     */
+    function hardangerfjordmagasinet_post_thumbnail() {
+        if ( ! hardangerfjordmagasinet_can_show_post_thumbnail() ) {
+            return;
+        }
+        ?>
+
+        <?php if ( is_singular() ) : ?>
+
+            <figure class="post-thumbnail">
+                <?php
+                // Lazy-loading attributes should be skipped for thumbnails since they are immediately in the viewport.
+                the_post_thumbnail( 'post-thumbnail', array( 'loading' => false ) );
+                ?>
+                <?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
+                    <figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?></figcaption>
+                <?php endif; ?>
+            </figure><!-- .post-thumbnail -->
+
+        <?php else : ?>
+
+            <figure class="post-thumbnail">
+                <a class="post-thumbnail-inner alignwide" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                    <?php the_post_thumbnail( 'post-thumbnail' ); ?>
+                </a>
+                <?php if ( wp_get_attachment_caption( get_post_thumbnail_id() ) ) : ?>
+                    <figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption( get_post_thumbnail_id() ) ); ?></figcaption>
+                <?php endif; ?>
+            </figure>
+
+        <?php endif; ?>
+        <?php
+    }
+}
+
+/**
+ * Determines if post thumbnail can be displayed.
+ *
+ * @since Twenty Twenty-One 1.0
+ *
+ * @return bool
+ */
+function hardangerfjordmagasinet_can_show_post_thumbnail() {
+    return apply_filters(
+        'hardangerfjordmagasinet_can_show_post_thumbnail',
+        ! post_password_required() && ! is_attachment() && has_post_thumbnail()
+    );
+}

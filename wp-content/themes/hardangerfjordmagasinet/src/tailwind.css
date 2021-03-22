@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ Typography
+ */
+.single article h1,
+.single article h2 {
+    @apply leading-6;
+}
+
+.single article .entry-content p {
+    @apply mb-4;
+}
+
 #frontpage-featured h1 {
     text-shadow: #222 1px 3px 10px;
 }
