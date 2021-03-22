@@ -28,6 +28,13 @@
                     <p>E-post: post@domene.no</p>
                     <a href="#">Personvern & informasjonskapsler</a>
                 </div>
+                <div class="col">
+                    <h4 class="font-bold">Sosiale medier</h4>
+                    <div class="flex">
+                        <div class="mr-2">fb</div>
+                        <div class="">in</div>
+                    </div>
+                </div>
             </div>
             <p>Footer</p>
             <p>Testing testing</p>
