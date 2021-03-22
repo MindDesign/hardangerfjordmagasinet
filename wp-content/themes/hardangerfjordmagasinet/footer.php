@@ -36,8 +36,6 @@
                     </div>
                 </div>
             </div>
-            <p>Footer</p>
-            <p>Testing testing</p>
         </div>
     </div>
 </footer><!-- #colophon -->
