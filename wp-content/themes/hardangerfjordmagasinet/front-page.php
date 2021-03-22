@@ -27,7 +27,7 @@ if ( $sticky[0] ) { ?>
     <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
         <section class="max-w-5xl" id="frontpage-featured">
             <div class="relative">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'full', array('class' => 'w-full h-auto')); ?></a>
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'frontpage-featured-image', array('class' => 'w-full h-auto')); ?></a>
                 <div class="max-w-xl absolute left-5 bottom-5">
                     <h1 class="mb-3 text-shadow text-4xl text-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                     <div class="text-white text-xl">
@@ -49,7 +49,7 @@ if ( $sticky[0] ) { ?>
         if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
         ?>
         <li class="col">
-            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( get_the_ID(), 'full' ); ?></a>
+            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image' ); ?></a>
             <div class="">
                 <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php the_excerpt() ?>

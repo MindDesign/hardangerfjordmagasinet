@@ -32,14 +32,14 @@ while ( have_posts() ) : the_post();
 
 endwhile; // End of the loop. ?>
 
-<section class="max-w-5xl">
+<section class="mt-12 pt-12 border-t border-primary-lighter max-w-5xl">
     <ul class="grid grid-cols-3 gap-8" id="frontpage-article-list">
         <?php
         $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
         if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
         ?>
         <li class="col">
-            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( get_the_ID(), 'full' ); ?></a>
+            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image' ); ?></a>
             <div class="">
                 <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php the_excerpt() ?>

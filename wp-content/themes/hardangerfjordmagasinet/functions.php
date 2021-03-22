@@ -64,6 +64,8 @@ if ( ! function_exists( 'hardangerfjordmagasinet_setup' ) ) {
          */
         add_theme_support('post-thumbnails');
         set_post_thumbnail_size(1568, 9999);
+        add_image_size( 'frontpage-featured-image', 1000, 380, true );
+        add_image_size( 'article-list-image', 400, 220, true );
 
         register_nav_menus(
             array(
@@ -143,6 +145,23 @@ function hardangerfjordmagasinet_scripts()
     wp_enqueue_script( 'hardangerfjordmagasinet-logo-carousel-script', get_template_directory_uri() . '/js/hardangermagasinet.js', array(), wp_get_theme()->get('version'), true );
 }
 add_action( 'wp_enqueue_scripts', 'hardangerfjordmagasinet_scripts' );
+
+
+
+if ( function_exists('register_sidebar') ) {
+    /**
+     *
+     */
+    register_sidebar(array(
+            'name' => 'header_search',
+            'before_widget' => '<div class = "">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        )
+    );
+}
+
 
 
 if ( ! function_exists( 'hardangerfjordmagasinet_post_thumbnail' ) ) {

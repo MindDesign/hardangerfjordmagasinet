@@ -10,7 +10,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'max-w-5xl'); ?>>
 
 	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header alignwide">

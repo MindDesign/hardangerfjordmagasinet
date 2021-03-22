@@ -12,33 +12,33 @@
 
 ?>
 
-</div><!-- end #content-container -->
-
-<footer id="site-footer" class="w-full border-t-2 border-b-2 border-primary-lighter" role="contentinfo">
-    <div class="bg-primary-lighter">
-        <div class="max-w-5xl p-0 lg:p-4 xl:p-6 my-1">
-            <div class="grid grid-cols-3 gap-8">
-                <div class="col">
-                    <img class="" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg'; ?>" alt="">
-                </div>
-                <div class="col">
-                    <h4 class="font-bold">Kontakt oss</h4>
-                    <p>Adresse kommer her</p>
-                    <p>Telefon: 00 00 00 00</p>
-                    <p>E-post: post@domene.no</p>
-                    <a href="#">Personvern & informasjonskapsler</a>
-                </div>
-                <div class="col">
-                    <h4 class="font-bold">Sosiale medier</h4>
-                    <div class="flex">
-                        <div class="mr-2">fb</div>
-                        <div class="">in</div>
+    <footer id="site-footer" class="lg:-mx-4 xl:-mx-6 flex-0 min-w-full border-t-2 border-b-2 border-primary-lighter" role="contentinfo">
+        <div class="bg-primary-lighter">
+            <div class="max-w-5xl p-0 lg:p-4 xl:p-6 my-1">
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="col">
+                        <img class="" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg'; ?>" alt="">
+                    </div>
+                    <div class="col">
+                        <h4 class="font-bold">Kontakt oss</h4>
+                        <p>Adresse kommer her</p>
+                        <p>Telefon: 00 00 00 00</p>
+                        <p>E-post: post@domene.no</p>
+                        <a href="#">Personvern & informasjonskapsler</a>
+                    </div>
+                    <div class="col">
+                        <h4 class="font-bold">Sosiale medier</h4>
+                        <div class="flex">
+                            <div class="mr-2">fb</div>
+                            <div class="">in</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer><!-- #colophon -->
+    </footer><!-- #colophon -->
+
+</div><!-- end #content-container -->
 
 <?php wp_footer(); ?>
 

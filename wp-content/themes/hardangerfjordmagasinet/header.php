@@ -11,16 +11,18 @@
  */
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
-    <head>
-        <meta charset="<?php bloginfo( 'charset' ); ?>" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <?php wp_head(); ?>
-    </head>
-<body <?php body_class( ); ?>>
-<?php wp_body_open(); ?>
-    <div class="p-0 lg:p-4 xl:p-6" id="content-container">
-        <header class="max-w-5xl relative" id="site-header">
+<html class="h-full" <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class( 'h-full' ); ?>>
+
+    <?php wp_body_open(); ?>
+
+    <div class="min-h-full flex flex-col items-stretch lg:px-4 xl:px-6" id="content-container">
+        <header class="lg:pt-4 xl:pt-6 flex-0 max-w-5xl relative" id="site-header">
             <div class="mb-8 w-full h-32 bg-primary" id="site-header-banner"> Banner </div>
 
             <div class="mb-8 flex justify-between items-center">
@@ -28,12 +30,12 @@
                     <img class="w-96 h-auto" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg' ?>" alt="">
                 </a>
                 <div class="flex flex-col items-end">
-                    <div class="px-4 py-2 mb-3 w-44 bg-gray-100">Søk</div>
+                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header_search") ) : ?><?php endif;?>
                     <?php get_template_part( 'templates/header/site-nav' ); ?>
                 </div>
             </div>
 
-            <div class="absolute top-0 -right-80 w-72 bg-primary h-96">
+            <div class="absolute hidden lg:block top-0 lg:top-4 xl:top-6 -right-80 w-72 bg-primary h-96">
                 Banner
             </div>
         </header>

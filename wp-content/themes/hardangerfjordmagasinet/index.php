@@ -13,25 +13,29 @@
  * @since HardangerFjordMagasinet 1.0
  */
 
-get_header();
+get_header(); ?>
 
-if ( have_posts() ) {
+<div class="mt-12 max-w-5xl flex-1">
 
-    // Load posts loop.
-    while ( have_posts() ) {
-        the_post();
+    <?php if ( have_posts() ) : ?>
 
-        //get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
-    }
+        <ul class="grid grid-cols-3 gap-8" id="frontpage-article-list">
 
-    // Previous/next page navigation.
-    //hardangerfjordmagasinet_the_posts_navigation();
+        <?php while ( have_posts() ) : ?>
+            <?php the_post(); ?>
+            <li class="col">
+                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image' ); ?></a>
+                <div class="">
+                    <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                    <?php the_excerpt() ?>
+                </div>
+            </li>
+        <?php endwhile; ?>
 
-} else {
+        </ul>
 
-    // If no content, include the "No posts found" template.
-    //get_template_part( 'template-parts/content/content-none' );
+    <?php endif; ?>
 
-}
+</div>
 
-get_footer();
+    <?php get_footer(); ?>
