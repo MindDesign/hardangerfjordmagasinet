@@ -551,6 +551,22 @@ video {
   height: auto;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+#site-header-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#side-banner {
+  width: 300px;
+  height: 600px;
+  right: -330px;
+}
+
 .container {
   width: 100%;
 }
@@ -32394,9 +32410,24 @@ video {
   margin-bottom: 1rem;
 }
 
+/**
+ Front page
+ */
+
 #frontpage-featured h1 {
   text-shadow: #222 1px 3px 10px;
 }
+
+/**
+ Header
+ */
+
+#header-search-form {
+}
+
+/**
+ Footer
+ */
 
 #site-footer-content {
   overflow: hidden;

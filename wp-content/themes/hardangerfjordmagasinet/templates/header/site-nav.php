@@ -14,7 +14,7 @@
         <?php if ( !empty ( $items ) ) : ?>
             <?php foreach ( $items as $item ) : ?>
                 <?php $current = ( $item->object_id == get_queried_object_id() ) ? 'font-bold' : ''; ?>
-                <a href="<?php echo $item->url; ?>" class="pl-4 text-xl text-primary uppercase <?php echo $current; ?>"><?php echo $item->title; ?></a>
+                <a href="<?php echo $item->url; ?>" class="py-4 block w-full text-center lg:py-auto lg:inline-block lg:w-auto lg:text-left lg:pl-4 text-xl text-primary uppercase <?php echo $current; ?>"><?php echo $item->title; ?></a>
             <?php endforeach; ?>
         <?php endif; ?>
     </nav><!-- #site-navigation -->

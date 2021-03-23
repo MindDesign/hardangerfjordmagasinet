@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-One package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-11 02:54:09+0000\n"
+"PO-Revision-Date: 2021-03-23 04:10:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -211,6 +211,11 @@ msgstr "&#8220;Selvportrett&#8221; av Berthe Morisot"
 msgid "&#8220;Daffodils&#8221; by Berthe Morisot"
 msgstr "&#8220;Påskeliljer&#8221; av Berthe Morisot"
 
+#: inc/starter-content.php:43 inc/block-patterns.php:72
+#: inc/block-patterns.php:107
+msgid "&#8220;Roses Trémières&#8221; by Berthe Morisot"
+msgstr "&#8220;Praktstokkroser&#8221; av Berthe Morisot"
+
 #: inc/template-functions.php:399
 msgctxt "Post password form"
 msgid "Enter"
@@ -286,6 +291,10 @@ msgstr "I Boulogne-skogen"
 msgid "Villa with Orange Trees, Nice"
 msgstr "Villa med appelsintrær, Nice"
 
+#: inc/block-patterns.php:107
+msgid "Roses Trémières"
+msgstr "Praktstokkroser"
+
 #: inc/block-patterns.php:96
 msgid "&#8220;Villa with Orange Trees, Nice&#8221; by Berthe Morisot"
 msgstr "&#8220;Villa med appelsintrær, Nice&#8221; av Berthe Morisot"
@@ -342,6 +351,11 @@ msgid "On Archive Pages, posts show:"
 msgstr "På arkivsider viser innlegg:"
 
 #. translators: %s: Author name.
+#: template-parts/post/author-bio.php:31
+msgid "View all of %s's posts."
+msgstr "Vis alle %ss innlegg."
+
+#. translators: %s: Author name.
 #: inc/template-tags.php:49 template-parts/post/author-bio.php:19
 msgid "By %s"
 msgstr "Av %s"
@@ -353,6 +367,11 @@ msgstr "Det ser ikke ut til at vi kan finne det du leter etter. Kanskje et søk 
 #: template-parts/content/content-none.php:56
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr "Beklager, men det var ikke noe som passet til ditt søk. Vennligst prøv igjen med andre søkeord."
+
+#. translators: %s: Link to WP admin new post page.
+#: template-parts/content/content-none.php:43
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr "Klar til å publisere ditt første innlegg? <a href=\"%s\">Kom i gang her</a>."
 
 #: single.php:40
 msgid "Previous post"

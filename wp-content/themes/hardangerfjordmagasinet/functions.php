@@ -160,6 +160,24 @@ if ( function_exists('register_sidebar') ) {
             'after_title' => '</h4>',
         )
     );
+
+    register_sidebar(array(
+            'name' => 'header_horizontal_banner',
+            'before_widget' => '<div class = "">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        )
+    );
+
+    register_sidebar(array(
+            'name' => 'header_vertical_banner',
+            'before_widget' => '<div class = "">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        )
+    );
 }
 
 

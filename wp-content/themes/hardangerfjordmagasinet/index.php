@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-<div class="mt-12 max-w-5xl flex-1">
+<div class="my-12 max-w-5xl flex-1">
 
     <?php if ( have_posts() ) : ?>
 

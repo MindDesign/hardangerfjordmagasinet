@@ -12,9 +12,9 @@
 
 ?>
 
-    <footer id="site-footer" class="lg:-mx-4 xl:-mx-6 flex-0 min-w-full border-t-2 border-b-2 border-primary-lighter" role="contentinfo">
+    <footer id="site-footer" class="md:-mx-2 lg:-mx-4 xl:-mx-6 flex-0 min-w-full border-t-2 border-b-2 border-primary-lighter" role="contentinfo">
         <div class="bg-primary-lighter">
-            <div class="max-w-5xl p-0 lg:p-4 xl:p-6 my-1" id="site-footer-content">
+            <div class="max-w-5xl p-0 md:p-2 lg:p-4 xl:p-6 my-1" id="site-footer-content">
                 <div class="grid grid-cols-3 gap-8">
                     <div class="col">
                         <img class="" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg'; ?>" alt="">

@@ -32,7 +32,7 @@ while ( have_posts() ) : the_post();
 
 endwhile; // End of the loop. ?>
 
-<section class="mt-12 pt-12 border-t border-primary-lighter max-w-5xl">
+<section class="my-12 pt-12 border-t border-primary-lighter max-w-5xl">
     <ul class="grid grid-cols-3 gap-8" id="frontpage-article-list">
         <?php
         $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );

@@ -1,4 +1,19 @@
 @tailwind base;
+
+body {
+    overflow-x: hidden;
+}
+
+#site-header-banner {
+    @apply flex items-center justify-center;
+}
+
+#side-banner {
+    width: 300px;
+    height: 600px;
+    right: -330px;
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -15,10 +30,26 @@
     @apply mb-4;
 }
 
+
+
+/**
+ Front page
+ */
 #frontpage-featured h1 {
     text-shadow: #222 1px 3px 10px;
 }
 
+
+/**
+ Header
+ */
+#header-search-form {
+
+}
+
+/**
+ Footer
+ */
 #site-footer-content {
     @apply relative overflow-hidden;
 }
