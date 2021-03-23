@@ -28,7 +28,7 @@ if ( $sticky[0] ) { ?>
         <section class="max-w-5xl" id="frontpage-featured">
             <div class="relative">
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'frontpage-featured-image', array('class' => 'w-full h-auto')); ?></a>
-                <div class="max-w-xl absolute left-5 bottom-5">
+                <div class="p-5 max-w-xl absolute left-0 bottom-0 bg-primary-darkest bg-opacity-50">
                     <h1 class="mb-3 text-shadow text-4xl text-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                     <div class="text-white text-xl">
                         <a href="<?php the_permalink(); ?>"><?php the_excerpt() ?></a>
@@ -59,6 +59,9 @@ if ( $sticky[0] ) { ?>
         endwhile;endif;
         ?>
     </ul>
+    <div class="mt-8 text-right">
+        <a href="/artikler/" class="text-xl text-right uppercase underline">Se flere artikler</a>
+    </div>
 </section>
 
 <section class="my-20 max-w-5xl">

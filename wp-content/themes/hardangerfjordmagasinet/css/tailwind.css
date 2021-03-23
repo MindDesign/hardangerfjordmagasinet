@@ -32390,12 +32390,27 @@ video {
   line-height: 1.5rem;
 }
 
-.single article .entry-content p {
+.single article .entry-content p, .page article .entry-content p {
   margin-bottom: 1rem;
 }
 
 #frontpage-featured h1 {
   text-shadow: #222 1px 3px 10px;
+}
+
+#site-footer-content {
+  overflow: hidden;
+  position: relative;
+}
+
+#site-footer-content::before {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  content: "";
+  width: 142px;
+  background: url("./../img/footer-decoration.png") 0 50%;
 }
 
 @media (min-width: 640px) {

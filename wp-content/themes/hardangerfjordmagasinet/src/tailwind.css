@@ -10,10 +10,22 @@
     @apply leading-6;
 }
 
-.single article .entry-content p {
+.single article .entry-content p,
+.page article .entry-content p {
     @apply mb-4;
 }
 
 #frontpage-featured h1 {
     text-shadow: #222 1px 3px 10px;
+}
+
+#site-footer-content {
+    @apply relative overflow-hidden;
+}
+
+#site-footer-content::before {
+    @apply absolute right-0 top-0 h-full;
+    content: "";
+    width: 142px;
+    background: url("./../img/footer-decoration.png") 0 50%;
 }

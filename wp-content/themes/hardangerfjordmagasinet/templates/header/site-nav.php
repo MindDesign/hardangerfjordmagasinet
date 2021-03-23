@@ -13,7 +13,8 @@
         <?php $items = wp_get_nav_menu_items('Hovedmeny'); ?>
         <?php if ( !empty ( $items ) ) : ?>
             <?php foreach ( $items as $item ) : ?>
-                <a href="<?php echo $item->url; ?>" class="pl-4 text-xl text-primary uppercase"><?php echo $item->title; ?></a>
+                <?php $current = ( $item->object_id == get_queried_object_id() ) ? 'font-bold' : ''; ?>
+                <a href="<?php echo $item->url; ?>" class="pl-4 text-xl text-primary uppercase <?php echo $current; ?>"><?php echo $item->title; ?></a>
             <?php endforeach; ?>
         <?php endif; ?>
     </nav><!-- #site-navigation -->
