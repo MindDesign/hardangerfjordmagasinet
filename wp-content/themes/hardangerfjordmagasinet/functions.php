@@ -234,7 +234,8 @@ if ( ! function_exists( 'hardangerfjordmagasinet_post_thumbnail' ) ) {
  *
  * @return bool
  */
-function hardangerfjordmagasinet_can_show_post_thumbnail() {
+function hardangerfjordmagasinet_can_show_post_thumbnail():bool
+{
     return apply_filters(
         'hardangerfjordmagasinet_can_show_post_thumbnail',
         ! post_password_required() && ! is_attachment() && has_post_thumbnail()
