@@ -17,6 +17,8 @@ get_header(); ?>
 
 <div class="my-12 max-w-5xl flex-1">
 
+    <h1 class="mb-4 text-5xl">Artikler</h1>
+
     <?php if ( have_posts() ) : ?>
 
         <ul class="grid grid-cols-3 gap-8" id="frontpage-article-list">
