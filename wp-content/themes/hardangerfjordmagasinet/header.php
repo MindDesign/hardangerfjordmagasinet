@@ -31,12 +31,13 @@
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="">
                     <img class="w-96 h-auto" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg' ?>" alt="">
                 </a>
-                <div class="hidden h-full w-full top-0 bottom-0 bg-white z-50 lg:z-auto lg:static lg:flex lg:flex-col lg:items-end lg:bg-transparent">
+                <div id="menu-wrapper" class="hidden h-full w-full top-0 bottom-0 bg-white z-50 lg:z-auto lg:static lg:flex lg:flex-col lg:items-end lg:bg-transparent">
+                    <button id="close-menu" type="button" class="hidden absolute z-50 top-0 right-0 p-6">CLOSE</button>
                     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header_search") ) : ?><?php endif;?>
                     <?php get_template_part( 'templates/header/site-nav' ); ?>
                 </div>
                 <div class="lg:hidden">
-                    <a href="javascript:" class="text-3xl">&#9776;</a>
+                    <a id="menu-button" href="javascript:" class="text-3xl">&#9776;</a>
                 </div>
             </div>
 
