@@ -40,7 +40,7 @@ endwhile; // End of the loop. ?>
         ?>
         <li class="col">
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image', array('class' => 'w-full') ); ?></a>
-            <div class="">
+            <div class="p-4 md:p-0">
                 <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php the_excerpt() ?>
             </div>
