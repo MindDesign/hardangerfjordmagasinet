@@ -43,7 +43,7 @@ if ( $sticky[0] ) { ?>
 
 
 <section class="max-w-5xl">
-    <ul class="grid grid-cols-3 gap-8" id="frontpage-article-list">
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="frontpage-article-list">
         <?php
         $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3, 'post__not_in' => get_option( 'sticky_posts' ) ) );
         if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
