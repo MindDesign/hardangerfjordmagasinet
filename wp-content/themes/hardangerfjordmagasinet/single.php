@@ -39,7 +39,7 @@ endwhile; // End of the loop. ?>
         if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
         ?>
         <li class="col">
-            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image' ); ?></a>
+            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image', array('class' => 'w-full') ); ?></a>
             <div class="">
                 <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php the_excerpt() ?>
