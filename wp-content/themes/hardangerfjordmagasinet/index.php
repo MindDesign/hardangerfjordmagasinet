@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-<div class="my-12 max-w-5xl flex-1">
+<div class="mb-12 max-w-5xl flex-1">
 
     <h1 class="mb-4 text-5xl">Artikler</h1>
 

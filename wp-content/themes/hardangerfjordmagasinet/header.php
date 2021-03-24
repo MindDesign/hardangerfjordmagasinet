@@ -27,7 +27,7 @@
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header_horizontal_banner") ) : ?><?php endif;?>
             </div>
 
-            <div class="mb-8 flex justify-between items-center">
+            <div class="flex justify-between items-center">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="">
                     <img class="w-96 h-auto" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg' ?>" alt="">
                 </a>
