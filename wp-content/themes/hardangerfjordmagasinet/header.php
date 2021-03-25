@@ -45,10 +45,18 @@
             </div>
 
             <div id="mobile-menu-wrapper" class="hidden fixed h-full left-0 w-full max-w-md top-0 bottom-0 bg-white z-50 shadow-2xl">
-                <button id="close-menu" type="button" class="absolute z-50 top-0 right-0 p-6">LUKK</button>
-                <div class="h-full w-full flex flex-col justify-center">
+                <button id="close-menu"
+                        type="button"
+                        class="flex items-center absolute z-50 top-0 right-0 p-6 text-white"
+                >
+                    LUKK
+                    <svg class="ml-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="h-full w-full flex flex-col justify-center bg-primary text-white">
                     <div class="">
-                        <?php get_template_part( 'templates/header/site-nav' ); ?>
+                        <?php get_template_part( 'templates/header/mobile-site-nav' ); ?>
                     </div>
                     <div class="">
                         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header_search") ) : ?><?php endif;?>
