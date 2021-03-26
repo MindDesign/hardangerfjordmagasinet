@@ -28,7 +28,7 @@ if ( $sticky[0] ) { ?>
         <section class="max-w-5xl" id="frontpage-featured">
             <div class="relative">
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'frontpage-featured-image', array('class' => 'w-full h-auto')); ?></a>
-                <div class="p-5 static md:absolute w-full lg:max-w-xl left-0 bottom-0 md:bg-black md:bg-opacity-60">
+                <div class="p-2 static md:absolute w-full lg:max-w-xl left-0 bottom-0 md:bg-black md:bg-opacity-60">
                     <h1 class="mb-3 md:text-shadow text-4xl md:text-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                     <div class="md:text-white text-lg lg:text-xl">
                         <a href="<?php the_permalink(); ?>"><?php the_excerpt() ?></a>
@@ -50,7 +50,7 @@ if ( $sticky[0] ) { ?>
         ?>
         <li class="col">
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image', array('class' => 'px-2 w-full') ); ?></a>
-            <div class="px-4 md:px-0">
+            <div class="px-2 md:px-0">
                 <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 <?php the_excerpt() ?>
             </div>
@@ -59,7 +59,7 @@ if ( $sticky[0] ) { ?>
         endwhile;endif;
         ?>
     </ul>
-    <div class="mt-8 text-right">
+    <div class="mt-8 pr-2 text-right">
         <a href="/artikler/" class="text-xl text-right uppercase underline">Se flere artikler</a>
     </div>
 </section>
@@ -70,26 +70,26 @@ if ( $sticky[0] ) { ?>
     <div class="logo-wrapper max-w-5xl overflow-hidden">
         <ul id="thumbnail-carousel" class="relative text-center">
             <li class="absolute left-0 h-full flex items-center">
-                <a href="#" class="">
+                <a href="#" class="thumbnail-carousel-prev">
                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
                     </svg>
                 </a>
             </li>
-            <li class="mx-10 inline-block">
+            <li class="mx-10 inline-block thumbnail-carousel-element">
                 <a href="#"><img src="https://via.placeholder.com/157x59.png/000000/ffffff" class="" alt=""></a>
             </li>
-            <li class="mx-10 inline-block">
+            <li class="mx-10 inline-block thumbnail-carousel-element">
                 <a href="#"><img src="https://via.placeholder.com/157x59.png/000000/ffffff" class="" alt=""></a>
             </li>
-            <li class="mx-10 inline-block">
+            <li class="mx-10 inline-block thumbnail-carousel-element">
                 <a href="#"><img src="https://via.placeholder.com/157x59.png/000000/ffffff" class="" alt=""></a>
             </li>
-            <li class="mx-10 inline-block">
+            <li class="mx-10 inline-block thumbnail-carousel-element">
                 <a href="#"><img src="https://via.placeholder.com/157x59.png/000000/ffffff" class="" alt=""></a>
             </li>
             <li class="absolute right-0 top-0 h-full flex items-center">
-                <a href="#" class="">
+                <a href="#" class="thumbnail-carousel-next">
                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>

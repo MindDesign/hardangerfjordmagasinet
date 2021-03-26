@@ -25,10 +25,21 @@ let menu = {
  * Logo carousel
  */
 let logoCarousel = {
-    list: document.getElementById("thumbnail-carousel"),
+    listWrapper: document.getElementById("thumbnail-carousel"),
+    listElements: document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-element"),
+    leftButton: document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-prev")[0],
+    rightButton: document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-next")[0],
 
     init: function () {
-        console.log (this.list);
+        let elementWidth = this.getElementWidth (this.listElements[0] );
+        this.listWrapper.style["width"] = elementWidth * this.listElements.length + "px";
+    },
+
+
+    getElementWidth: function(el) {
+        el = (typeof el === 'string') ? document.querySelector(el) : el;
+        let styles = window.getComputedStyle(el);
+        return Math.ceil ( el.offsetWidth + parseFloat(styles['marginLeft']) + parseFloat(styles['marginRight']) );
     }
 };
 
@@ -36,4 +47,6 @@ let logoCarousel = {
     "use strict";
 
     menu.init();
+
+    logoCarousel.init();
 }());

@@ -23,7 +23,7 @@
 
     <div class="min-h-full flex flex-col items-stretch md:px-2 lg:px-4 xl:px-6" id="content-container">
         <header class="mb-8 lg:mb-0 mr-0 lg:pt-4 xl:pt-6 flex-0 max-w-5xl relative" id="site-header">
-            <div class="mb-8 w-full h-28 bg-gray-50" id="site-header-banner">
+            <div class="mb-8 w-full h-auto bg-gray-50" id="site-header-banner">
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header_horizontal_banner") ) : ?><?php endif;?>
             </div>
 
