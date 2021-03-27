@@ -4,22 +4,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @package HardangerFjordMagasinet
+ * @since HardangerFjordMagasinet 1.0
  */
-
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php get_template_part( 'template-parts/header/excerpt-header', get_post_format() ); ?>
-
-	<div class="entry-content">
-		<?php get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer default-max-width">
-		<?php twenty_twenty_one_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-${ID} -->
+<article id="post-<?php the_ID(); ?>" <?php post_class( "col" ); ?>>
+    <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image', array('class' => 'px-2 md:px-0 w-full') ); ?></a>
+    <div class="px-2 md:px-0">
+        <h2 class="my-2 text-2xl font-light"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+        <?php the_excerpt() ?>
+    </div>
+</article>

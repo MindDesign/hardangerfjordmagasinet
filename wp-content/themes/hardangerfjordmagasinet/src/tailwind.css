@@ -22,11 +22,18 @@ body {
  */
 .single article h1,
 .single article h2 {
-    @apply leading-6;
+
 }
 
-.single article .entry-content p,
-.page article .entry-content p {
+article .entry-content h2 {
+    @apply py-2 text-3xl;
+}
+
+article .entry-content h3 {
+    @apply text-2xl font-light my-1;
+}
+
+article .entry-content p {
     @apply mb-4 leading-5;
 }
 

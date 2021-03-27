@@ -17,24 +17,20 @@ get_header(); ?>
 
 <div class="mb-12 max-w-5xl flex-1">
 
-    <h1 class="mb-4 text-5xl">Artikler</h1>
+    <h1 class="px-2 md:px-0 mb-4 text-5xl">Artikler</h1>
 
     <?php if ( have_posts() ) : ?>
 
-        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="frontpage-article-list">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="frontpage-article-list">
 
         <?php while ( have_posts() ) : ?>
             <?php the_post(); ?>
-            <li class="col">
-                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image', array('class' => 'w-full') ); ?></a>
-                <div class="p-4 md:p-0">
-                    <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                    <?php the_excerpt() ?>
-                </div>
-            </li>
+
+            <?php get_template_part ( "templates/content/content-excerpt"); ?>
+
         <?php endwhile; ?>
 
-        </ul>
+        </div>
 
     <?php endif; ?>
 

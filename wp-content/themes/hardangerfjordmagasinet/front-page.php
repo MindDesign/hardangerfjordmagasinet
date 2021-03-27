@@ -42,23 +42,16 @@ if ( $sticky[0] ) { ?>
 ?>
 
 
-<section class="max-w-5xl">
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="frontpage-article-list">
+<section class="mt-4 md:mt-0 max-w-5xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="frontpage-article-list">
         <?php
         $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3, 'post__not_in' => get_option( 'sticky_posts' ) ) );
-        if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
-        ?>
-        <li class="col">
-            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'article-list-image', array('class' => 'px-2 w-full') ); ?></a>
-            <div class="px-2 md:px-0">
-                <h2 class="mt-2 mb-3 text-xl"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                <?php the_excerpt() ?>
-            </div>
-        </li>
-        <?php
-        endwhile;endif;
-        ?>
-    </ul>
+        if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
+
+            <?php get_template_part ( "templates/content/content-excerpt"); ?>
+
+        <?php endwhile;endif; ?>
+    </div>
     <div class="mt-8 pr-2 text-right">
         <a href="/artikler/" class="text-xl text-right uppercase underline">Se flere artikler</a>
     </div>

@@ -137,24 +137,26 @@ if ( ! function_exists( 'hardangerfjordmagasinet_setup' ) ) {
 }
 
 /**
- *
+ * Load theme scripts and CSS
  */
 function hardangerfjordmagasinet_scripts()
 {
     $css_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/css/tailwind.css'));
     $js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/js/hardangermagasinet.js'));
     wp_enqueue_style('hardangerfjordmagasinet-style', get_template_directory_uri() . '/style.css', array(), $css_cache_buster);
-    wp_enqueue_script( 'hardangerfjordmagasinet-logo-carousel-script', get_template_directory_uri() . '/js/hardangermagasinet.js', array(), $js_cache_buster, true );
+    wp_enqueue_script( 'hardangerfjordmagasinet-script', get_template_directory_uri() . '/js/hardangermagasinet.js', array(), $js_cache_buster, true );
 }
 add_action( 'wp_enqueue_scripts', 'hardangerfjordmagasinet_scripts' );
 
 
-
+/**
+ * Register theme sidebars
+ */
 if ( function_exists('register_sidebar') ) {
     /**
      *
      */
-    register_sidebar(array(
+    register_sidebar ( array (
             'name' => 'header_search',
             'before_widget' => '<div class = "">',
             'after_widget' => '</div>',
@@ -163,7 +165,7 @@ if ( function_exists('register_sidebar') ) {
         )
     );
 
-    register_sidebar(array(
+    register_sidebar ( array (
             'name' => 'header_horizontal_banner',
             'before_widget' => '<div class = "">',
             'after_widget' => '</div>',
@@ -172,9 +174,36 @@ if ( function_exists('register_sidebar') ) {
         )
     );
 
-    register_sidebar(array(
+    register_sidebar ( array (
             'name' => 'header_vertical_banner',
             'before_widget' => '<div class = "">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        )
+    );
+
+    register_sidebar ( array (
+            'name' => 'footer_col_1',
+            'before_widget' => '<div class="col">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        )
+    );
+
+    register_sidebar ( array (
+            'name' => 'footer_col_2',
+            'before_widget' => '<div class="col">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4>',
+            'after_title' => '</h4>',
+        )
+    );
+
+    register_sidebar ( array (
+            'name' => 'footer_col_3',
+            'before_widget' => '<div class="col">',
             'after_widget' => '</div>',
             'before_title' => '<h4>',
             'after_title' => '</h4>',
@@ -232,7 +261,7 @@ if ( ! function_exists( 'hardangerfjordmagasinet_post_thumbnail' ) ) {
 /**
  * Determines if post thumbnail can be displayed.
  *
- * @since Twenty Twenty-One 1.0
+ * @since HardangerFjordMagasinet 1.0
  *
  * @return bool
  */

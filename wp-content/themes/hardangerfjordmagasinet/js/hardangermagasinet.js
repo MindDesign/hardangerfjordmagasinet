@@ -25,12 +25,16 @@ let menu = {
  * Logo carousel
  */
 let logoCarousel = {
-    listWrapper: document.getElementById("thumbnail-carousel"),
-    listElements: document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-element"),
-    leftButton: document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-prev")[0],
-    rightButton: document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-next")[0],
+    listWrapper: '',
+    listElements: '',
+    leftButton: '',
+    rightButton: '',
 
     init: function () {
+        this.listWrapper = document.getElementById("thumbnail-carousel");
+        this.listElements = document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-element");
+        this.leftButton = document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-prev")[0];
+        this.rightButton = document.getElementById("thumbnail-carousel").getElementsByClassName("thumbnail-carousel-next")[0];
         let elementWidth = this.getElementWidth (this.listElements[0] );
         this.listWrapper.style["width"] = elementWidth * this.listElements.length + "px";
     },
@@ -48,5 +52,8 @@ let logoCarousel = {
 
     menu.init();
 
-    logoCarousel.init();
+    // Check if logo carousel is on page
+    if ( document.getElementById("thumbnail-carousel") ) {
+        logoCarousel.init();
+    }
 }());
