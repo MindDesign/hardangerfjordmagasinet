@@ -28,7 +28,7 @@ if ( $sticky[0] ) { ?>
         <section class="max-w-5xl" id="frontpage-featured">
             <div class="relative">
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'frontpage-featured-image', array('class' => 'w-full h-auto')); ?></a>
-                <div class="p-2 static md:absolute w-full lg:max-w-xl left-8 top-8 md:bg-black md:bg-opacity-60">
+                <div class="p-2 static md:absolute lg:w-full lg:max-w-xl left-8 top-8 md:bg-black md:bg-opacity-60">
                     <h1 class="mb-3 md:text-shadow text-3xl md:text-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                     <div class="md:text-white text-md">
                         <a href="<?php the_permalink(); ?>"><?php the_excerpt() ?></a>
