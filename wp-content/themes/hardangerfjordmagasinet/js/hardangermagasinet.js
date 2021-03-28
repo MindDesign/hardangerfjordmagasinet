@@ -54,6 +54,6 @@ let logoCarousel = {
 
     // Check if logo carousel is on page
     if ( document.getElementById("thumbnail-carousel") ) {
-        logoCarousel.init();
+        //logoCarousel.init();
     }
 }());
