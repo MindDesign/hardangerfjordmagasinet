@@ -24,7 +24,7 @@ $hardangerfjordmagasinet_aria_label = ! empty( $args['aria_label'] ) ? 'aria-lab
 	<label class="sr-only" for="<?php echo esc_attr( $hardangerfjordmagasinet_unique_id ); ?>">Søk</label>
 	<input type="search"
            id="<?php echo esc_attr( $hardangerfjordmagasinet_unique_id ); ?>"
-           class="py-2 lg:px-4 lg:mb-3 w-full lg:w-44 border-b border-gray lg:border-none placeholder-gray-200 lg:placeholder-black text-white lg:text-black bg-transparent lg:bg-gray-100"
+           class="py-2 lg:px-4 w-full lg:w-44 border-b border-gray lg:border-none placeholder-gray-200 lg:placeholder-black text-white lg:text-black bg-transparent lg:bg-gray-100"
            placeholder="Søk"
            value="<?php echo get_search_query(); ?>"
            name="s" />

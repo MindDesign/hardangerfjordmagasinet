@@ -23,13 +23,13 @@
 
     <div class="min-h-full flex flex-col items-stretch md:px-2 lg:px-4 xl:px-6" id="content-container">
         <header class="mb-8 lg:mb-0 mr-0 lg:pt-4 xl:pt-6 flex-0 max-w-5xl relative" id="site-header">
-            <div class="mb-8 w-full h-auto bg-gray-50" id="site-header-banner">
+            <div class="mb-4 w-full h-auto bg-gray-50" id="site-header-banner">
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header_horizontal_banner") ) : ?><?php endif;?>
             </div>
 
             <div class="flex justify-between items-center">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="">
-                    <img class="px-2 w-72 md:w-96 h-auto" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg' ?>" alt="">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="px-2 w-auto h-14">
+                    <img class="px-2 w-auto h-14" src="<?php echo get_stylesheet_directory_uri() . '/img/hardangerfjordmagasinet-logo.svg' ?>" alt="">
                 </a>
                 <div class="hidden lg:z-auto lg:static lg:flex lg:flex-col lg:items-end">
                     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header_search") ) : ?><?php endif;?>
