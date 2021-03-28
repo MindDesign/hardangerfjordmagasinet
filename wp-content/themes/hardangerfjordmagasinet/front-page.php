@@ -53,7 +53,7 @@ if ( $sticky[0] ) { ?>
         <?php endwhile;endif; ?>
     </div>
     <div class="mt-8 pr-2 text-right">
-        <a href="/artikler/" class="text-xl text-right uppercase underline">Se flere artikler</a>
+        <a href="/artikler/" class="text-xl text-right uppercase underline">Sjå fleire artiklar</a>
     </div>
 </section>
 
