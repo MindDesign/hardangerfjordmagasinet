@@ -19,7 +19,7 @@
 
         <div class="pb-4">
             <?php $categories = get_the_category(); ?>
-            <p class=""><?php echo get_the_author(); ?> - <?php echo $categories[0]->cat_name; ?></p>
+            <p class=""><?php echo get_the_author(); ?> <?php echo $categories[0]->cat_name; ?></p>
         </div>
 
         <div class="mb-4 text-xl md:text-2xl font-light">
