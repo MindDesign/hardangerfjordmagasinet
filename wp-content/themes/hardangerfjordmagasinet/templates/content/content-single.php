@@ -16,6 +16,12 @@
 
     <header class="entry-header alignwide">
 		<?php the_title( '<h1 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-medium">', '</h1>' ); ?>
+
+        <div class="pb-4">
+            <?php $categories = get_the_category(); ?>
+            <p class=""><?php echo get_the_author(); ?> - <?php echo $categories[0]->cat_name; ?></p>
+        </div>
+
         <div class="mb-4 text-xl md:text-2xl font-light">
             <?php the_excerpt() ?>
         </div>
@@ -43,8 +49,5 @@
 		<?php //twenty_twenty_one_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-	<?php //if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php //get_template_part( 'template-parts/post/author-bio' ); ?>
-	<?php //endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
