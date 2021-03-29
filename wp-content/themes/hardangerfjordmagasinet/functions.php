@@ -185,27 +185,27 @@ if ( function_exists('register_sidebar') ) {
 
     register_sidebar ( array (
             'name' => 'footer_col_1',
-            'before_widget' => '<div class="col">',
-            'after_widget' => '</div>',
-            'before_title' => '<h4>',
+            'before_widget' => '',
+            'after_widget' => '',
+            'before_title' => '<h4 class="pb-2 font-bold leading-none uppercase">',
             'after_title' => '</h4>',
         )
     );
 
     register_sidebar ( array (
             'name' => 'footer_col_2',
-            'before_widget' => '<div class="col">',
-            'after_widget' => '</div>',
-            'before_title' => '<h4>',
+            'before_widget' => '',
+            'after_widget' => '',
+            'before_title' => '<h4 class="pb-2 font-bold leading-none uppercase">',
             'after_title' => '</h4>',
         )
     );
 
     register_sidebar ( array (
             'name' => 'footer_col_3',
-            'before_widget' => '<div class="col">',
-            'after_widget' => '</div>',
-            'before_title' => '<h4>',
+            'before_widget' => '',
+            'after_widget' => '',
+            'before_title' => '<h4 class="pb-2 font-bold leading-none uppercase">',
             'after_title' => '</h4>',
         )
     );

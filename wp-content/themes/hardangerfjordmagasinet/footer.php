@@ -13,13 +13,27 @@
 ?>
 
     <footer id="site-footer" class="md:-mx-2 lg:-mx-4 xl:-mx-6 flex-0 min-w-full border-t-2 border-b-2 border-primary-lighter" role="contentinfo">
-        <div class="bg-primary-lighter">
-            <div class="max-w-5xl p-4 md:p-2 lg:p-4 xl:p-6 my-1" id="site-footer-content">
-                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <div class="md:px-2 lg:px-4 xl:px-6 bg-primary-lighter">
+            <div class="max-w-5xl py-4 my-1" id="site-footer-content">
+                <div class="grid grid-cols-6 gap-12">
 
-                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_1") ) : ?><?php endif;?>
-                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_2") ) : ?><?php endif;?>
-                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_3") ) : ?><?php endif;?>
+                    <div class="col col-span-2">
+                        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_1") ) : ?><?php endif;?>
+                    </div>
+
+                    <div class="col col-span-2">
+                        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_2") ) : ?><?php endif;?>
+                    </div>
+
+                    <div class="col col-span-2">
+                        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_3") ) : ?><?php endif;?>
+                        <div class="flex">
+                            <a href="https://www.facebook.com/HardangerfjordMagasinet" target="_blank" class="pr-3 mr-2">
+                                <img class="w-auto h-6" src="<?php echo get_template_directory_uri() . '/img/facebook-logo.svg'; ?>" alt="">
+                            </a>
+
+                        </div>
+                    </div>
 
                 </div>
             </div>
