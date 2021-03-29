@@ -15,17 +15,17 @@
     <footer id="site-footer" class="md:-mx-2 lg:-mx-4 xl:-mx-6 flex-0 min-w-full border-t-2 border-b-2 border-primary-lighter" role="contentinfo">
         <div class="md:px-2 lg:px-4 xl:px-6 bg-primary-lighter">
             <div class="max-w-5xl py-4 my-1" id="site-footer-content">
-                <div class="grid grid-cols-6 gap-12">
+                <div class="flex flex-wrap">
 
-                    <div class="col col-span-2">
+                    <div class="w-full px-4 mb-10 md:w-1/3">
                         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_1") ) : ?><?php endif;?>
                     </div>
 
-                    <div class="col col-span-2">
+                    <div class="w-1/2 px-4 md:w-1/3">
                         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_2") ) : ?><?php endif;?>
                     </div>
 
-                    <div class="col col-span-2">
+                    <div class="w-1/2 px-4 md:w-1/3">
                         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_col_3") ) : ?><?php endif;?>
                         <div class="flex">
                             <a href="https://www.facebook.com/HardangerfjordMagasinet" target="_blank" class="pr-3 mr-2">
