@@ -32407,8 +32407,11 @@ body {
 }
 
 article .entry-content h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -32424,6 +32427,11 @@ article .entry-content h3 {
 article .entry-content p {
   line-height: 1.25rem;
   margin-bottom: 1rem;
+}
+
+.single article .entry-content {
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
 }
 
 /**

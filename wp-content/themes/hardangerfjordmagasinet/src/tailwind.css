@@ -26,7 +26,7 @@ body {
 }
 
 article .entry-content h2 {
-    @apply py-2 text-3xl;
+    @apply my-2 py-2 text-2xl font-semibold;
 }
 
 article .entry-content h3 {
@@ -35,6 +35,10 @@ article .entry-content h3 {
 
 article .entry-content p {
     @apply mb-4 leading-5;
+}
+
+.single article .entry-content {
+    @apply auto-cols-max;
 }
 
 

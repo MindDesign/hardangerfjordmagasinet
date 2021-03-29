@@ -35,7 +35,7 @@ endwhile; // End of the loop. ?>
 <section class="my-12 pt-12 border-t border-primary-lighter max-w-5xl">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="frontpage-article-list">
         <?php
-        $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 2 ) );
+        $latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
         if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
         ?>
 
