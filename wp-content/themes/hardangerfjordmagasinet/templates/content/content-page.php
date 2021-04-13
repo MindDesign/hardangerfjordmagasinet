@@ -23,7 +23,7 @@
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 
-	<div class="entry-content max-w-3xl mx-auto">
+	<div class="entry-content">
 		<?php
 		the_content();
 
