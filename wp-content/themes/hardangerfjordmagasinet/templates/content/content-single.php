@@ -25,7 +25,7 @@
         <div class="mb-4 text-xl md:text-2xl font-light">
             <?php the_excerpt() ?>
         </div>
-		<?php the_post_thumbnail('full', array('class' => 'w-full h-auto')); ?>
+		<?php the_post_thumbnail('frontpage-featured-image', array('class' => 'w-full h-auto')); ?>
         <div class="px-2 mt-2 mb-4 leading-5 font-light italic"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></div>
 
 	</header><!-- .entry-header -->
