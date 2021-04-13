@@ -279,6 +279,30 @@
                     </g>
                     </svg>
             </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/etne_kommune.png'; ?>" alt="">
+            </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/fitjar-logo.png'; ?>" alt="">
+            </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/kvinnherad-logo.png'; ?>" alt="">
+            </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/logo-bomlo.svg'; ?>" alt="">
+            </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/stord-kommune.png'; ?>" alt="">
+            </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/sveio-logo.svg'; ?>" alt="">
+            </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/tysnes-logo.png'; ?>" alt="">
+            </div>
+            <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-2">
+                <img class="w-auto h-12" src="<?php echo get_stylesheet_directory_uri() . '/img/vindafjord-logo.png'; ?>" alt="">
+            </div>
         </div>
     </div>
 </div>
